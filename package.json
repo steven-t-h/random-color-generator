@@ -1,6 +1,11 @@
 {
   "name": "@apollo-tech/random-color",
-  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steven-t-h/random-color-generator"
+  },
+  "version": "0.0.4",
+  "private": false,
   "description": "A simple random color generator",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
