@@ -1,3 +1,6 @@
+# Editor directories
+.idea
+
 # Logs
 logs
 *.log

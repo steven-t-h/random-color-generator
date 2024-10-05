@@ -1,6 +1,6 @@
 {
   "name": "@apollo-tech/random-color",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple random color generator",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -14,7 +14,7 @@
     "build": "tsup",
     "prepublish": "npm run build",
     "preversion": "npm test",
-    "publish": "npm run build && npm publish --access public"
+    "deploy": "npm run build && npm publish --access public"
   },
   "keywords": [
     "random",

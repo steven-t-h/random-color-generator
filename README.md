@@ -2,7 +2,7 @@
 
 This is a simple random color generator that generates a random color, or colors, in the requested format. It is heavily
 based on the [randomcolor](https://github.com/davidmerfield/randomColor) tiny script. This package simply expands
-on the original script by adding more features and options, particularily by instantiating a class that can be used to
+on the original script by adding more features and options, particularly by instantiating a class that can be used to
 retain the history of generated colors.
 
 ## Installation
@@ -37,7 +37,7 @@ You can pass an options object to influence the type of color it produces. The o
 
 `seed` - An integer or string which when passed will cause randomColor to return the same color each time.
 
-`format` – A string which specifies the format of the generated color. Possible values are `rgb`, `rgba`, `rgbArray`, `hsl`, `hsla`, `hslArray`.
+`format` – A string which specifies the format of the generated color. Possible values are `rgb`, `rgba`, `rgbArray`, `hsl`, `hsla`, `hslArray`, and `hex`.
 If you do not provide a value, `hex` will be used.
 
 `alpha` – A decimal between 0 and 1. This is only relevant when using a format with an alpha channel (`rgba` and `hsla`). Defaults to a random value.
@@ -50,6 +50,8 @@ console.log(color);
 ```
 
 ### History
+
+The generator class retains a history of generated colors. You can access the history by calling the `history` property.
 
 ```javascript
 // view the history of generated colors

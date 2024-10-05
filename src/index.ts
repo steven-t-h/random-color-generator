@@ -1,15 +1,56 @@
-export type RandomColorOptions = {
+type RandomColorOptions = {
+    /**
+     * Seed to get repeatable colors.
+     */
     seed?: number | null;
+    /**
+     * Number of colors to generate
+     * If count is set and > 1, the function will return an array of colors. Otherwise,
+     * it will return a single color.
+     * @default 1
+     *
+     */
     count?: number | null;
-    // leave undefined for hex
-    format?: 'hsvArray' | 'hslArray' | 'hsl' | 'hsla' | 'rgbArray' | 'rgb' | 'rgba'
+    /**
+     * Format of the color to return
+     * @default 'hex'
+     */
+    format?: 'hsvArray' | 'hslArray' | 'hsl' | 'hsla' | 'rgbArray' | 'rgb' | 'rgba' | 'hex';
+    /**
+     * Alpha value of the color
+     * @default Math.random()
+     */
     alpha?: any;
+    /**
+     * Hue of the color
+     * @default 'random'
+     */
     hue?: 'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'purple' | 'pink' | 'monochrome'
+    /**
+     * Verbose mode to view debug logs.
+     * All logs are prefixed with [RandomColor]
+     * @default false
+     */
     verbose?: boolean;
+    /**
+     * Luminosity of the color
+     * @default 'random'
+     */
     luminosity?: 'bright' | 'dark' | 'light' | 'random'
 } | null
 
+/**
+ * ColorResponse type
+ * @example
+ * const color: ColorResponse = "#FF0000";
+ * const color2: ColorResponse = [255, 0, 0];
+ */
 export type ColorResponse = string | number[]
+/**
+ * MultiColorResponse type
+ * @example
+ * const colors: MultiColorResponse = ["#FF0000", "#00FF00"];
+ */
 export type MultiColorResponse = ColorResponse[]
 
 /**
